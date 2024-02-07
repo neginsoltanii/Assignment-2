@@ -182,7 +182,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65820338247890050, guid: 0b50edd1ab1ea9c4ba8edc42f1b15181, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -190,6 +191,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2142944849}
+    - targetCorrespondingSourceObject: {fileID: 1244528808271462, guid: 0b50edd1ab1ea9c4ba8edc42f1b15181,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2142944850}
+    - targetCorrespondingSourceObject: {fileID: 1244528808271462, guid: 0b50edd1ab1ea9c4ba8edc42f1b15181,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2142944851}
   m_SourcePrefab: {fileID: 100100000, guid: 0b50edd1ab1ea9c4ba8edc42f1b15181, type: 3}
 --- !u!1 &17959880
 GameObject:
@@ -381,6 +390,10 @@ PrefabInstance:
     - target: {fileID: 1023248994340480, guid: 988ac363bd09b2749b0601852532ebcd, type: 3}
       propertyPath: m_Name
       value: Medicine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023248994340480, guid: 988ac363bd09b2749b0601852532ebcd, type: 3}
+      propertyPath: m_TagString
+      value: Unsafe
       objectReference: {fileID: 0}
     - target: {fileID: 4800564829886586, guid: 988ac363bd09b2749b0601852532ebcd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2049,9 +2062,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1412851918}
   - {fileID: 111980606}
   - {fileID: 396651834}
-  - {fileID: 1412851918}
   - {fileID: 1746353868}
   - {fileID: 64979555}
   - {fileID: 238548701}
@@ -3885,6 +3898,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: '[BB] Throwable Cube'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116536632940550998, guid: a39f14d93fa584432b8f4d312acb98c4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Safe
       objectReference: {fileID: 0}
     - target: {fileID: 6116536632940551003, guid: a39f14d93fa584432b8f4d312acb98c4,
         type: 3}
@@ -6812,6 +6830,41 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 39bcb2bc55ab6c14a8d3f24fc5e07575, type: 3}
+--- !u!114 &2142944850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047377846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d5e83f2750d4d2391be527dc1848fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  safeObjectClip: {fileID: 8300000, guid: d4e19d763eb114e318ca23f0d1b24994, type: 3}
+  unsafeObjectClip: {fileID: 8300000, guid: e659a6965b977405287c0b7aba4f9bdc, type: 3}
+--- !u!65 &2142944851
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047377846}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.326398, y: 0.04285574, z: 0.32639807}
+  m_Center: {x: -0.000000044703484, y: 0.25, z: -0.000000029802322}
 --- !u!1001 &243477023560498868
 PrefabInstance:
   m_ObjectHideFlags: 0
