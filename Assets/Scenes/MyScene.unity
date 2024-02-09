@@ -3309,7 +3309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37604248656b64027a1f87baa992e05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionClip: {fileID: 8300000, guid: 76174654066f64948ad8909123dc01fd, type: 3}
+  collisionClip: {fileID: 8300000, guid: 99d52d8ed97644662b7663ce0f4fa1e1, type: 3}
 --- !u!1001 &844970191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6820,7 +6820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37604248656b64027a1f87baa992e05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionClip: {fileID: 8300000, guid: 68f41a3ad14b24917b51f9504464923a, type: 3}
+  collisionClip: {fileID: 8300000, guid: c0a9173bd62454fc898ec2ed89f2e60a, type: 3}
 --- !u!1001 &1758191510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9640,8 +9640,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d5e83f2750d4d2391be527dc1848fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  safeObjectClip: {fileID: 8300000, guid: d4e19d763eb114e318ca23f0d1b24994, type: 3}
+  safeObjectClip: {fileID: 8300000, guid: 579f0da8d3e5f49458958b4c234881c6, type: 3}
   unsafeObjectClip: {fileID: 8300000, guid: e659a6965b977405287c0b7aba4f9bdc, type: 3}
+  allUnsafeObjectsInBinClip: {fileID: 8300000, guid: 579f0da8d3e5f49458958b4c234881c6,
+    type: 3}
   resetButton: {fileID: 34414791}
 --- !u!65 &2142944851
 BoxCollider:
