@@ -26,14 +26,24 @@ public class ObjectsManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        ObjectCollisionSound collisionSoundScript = other.GetComponent<ObjectCollisionSound>();
+
         if (other.CompareTag("Safe"))
         {
             audioSource.PlayOneShot(safeObjectClip);
             resetButton.SetActive(true); // Show the button
+            if (collisionSoundScript != null)
+            {
+                collisionSoundScript.PreventSoundNextCollision();
+            }
         }
         else if (other.CompareTag("Unsafe"))
         {
             audioSource.PlayOneShot(unsafeObjectClip);
+            if (collisionSoundScript != null)
+            {
+                collisionSoundScript.PreventSoundNextCollision();
+            }
         }
     }
 
