@@ -6,7 +6,7 @@ public class ObjectsManager : MonoBehaviour
 {
     public AudioClip safeObjectClip;
     public AudioClip unsafeObjectClip;
-    public GameObject resetButton; // Assign this in the Inspector
+    public GameObject resetButton;
 
     private AudioSource audioSource;
     private Dictionary<GameObject, Vector3> safeObjectsInitialPositions = new Dictionary<GameObject, Vector3>();
@@ -17,11 +17,9 @@ public class ObjectsManager : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
         resetButton.SetActive(false); // Hide button initially
 
-        // Assume the safe objects are all active at the start
         GameObject[] safeObjects = GameObject.FindGameObjectsWithTag("Safe");
         foreach (GameObject obj in safeObjects)
         {
-            // Record the initial position of each safe object
             safeObjectsInitialPositions[obj] = obj.transform.position;
         }
     }
@@ -39,15 +37,17 @@ public class ObjectsManager : MonoBehaviour
         }
     }
 
-    // Call this from event trigger on the button
     public void ResetSafeObjects()
+    {
+        StartCoroutine(ResetSafeObjectsCoroutine());
+    }
+
+    IEnumerator ResetSafeObjectsCoroutine()
     {
         foreach (KeyValuePair<GameObject, Vector3> entry in safeObjectsInitialPositions)
         {
-            // Move safe objects back to their initial positions
             entry.Key.transform.position = entry.Value;
 
-            // Consider also resetting physics if needed
             Rigidbody rb = entry.Key.GetComponent<Rigidbody>();
             if (rb != null)
             {
@@ -56,11 +56,12 @@ public class ObjectsManager : MonoBehaviour
             }
         }
 
-        // Turn off audio
         audioSource.Stop();
 
-        // Hide the button again
+        // Wait for a second or so to let the glow and sound effect play out
+        yield return new WaitForSeconds(0.5f); 
+
+        // Hide the button after waiting
         resetButton.SetActive(false);
     }
 }
-
