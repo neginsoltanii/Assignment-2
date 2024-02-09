@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/Meta XR Interaction SDK OVR Samples/60.0.0/Example Scenes/DistanceGrabExamples.unity
     guid: e1c1f1d4144ac8849ac1833b99bdfd23
+  - enabled: 0
+    path: Assets/Samples/Meta XR Interaction SDK OVR Samples/60.0.0/Example Scenes/PokeExamples.unity
+    guid: ada3086bde0ab18459589e22d8d9e182
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 98d4fbccc071f44519e19e802d37dd82,
       type: 2}
