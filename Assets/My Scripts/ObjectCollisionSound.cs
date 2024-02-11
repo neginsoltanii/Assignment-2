@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ObjectCollisionSound : MonoBehaviour
 {
-    public AudioClip collisionClip; // Assign different clips for Safe and Unsafe objects in the inspector
+    public AudioClip collisionClip; 
     private AudioSource audioSource;
-    private bool preventSound = false;
+    //private bool preventSound = false;
 
     void Start()
     {
@@ -19,18 +19,19 @@ public class ObjectCollisionSound : MonoBehaviour
             return; // Exit the method without playing the sound
         }
 
-        // Check if we should prevent sound (e.g., collided with the trash bin)
-        if (!preventSound)
-        {
-            audioSource.PlayOneShot(collisionClip);
-        }
-        // Reset the flag in case it was set for a trash collision
-        preventSound = false;
-    }
+        // For all other collisions, play the collision sound
+        audioSource.PlayOneShot(collisionClip);
 
 
-    public void PreventSoundNextCollision()
-    {
-        preventSound = true;
+        // Check if we should prevent sound 
+        //if (!preventSound)
+        //{
+        //}
+        //// Reset the flag in case it was set for a trash collision
+        //preventSound = false;
     }
+    //public void PreventSoundNextCollision()
+    //{
+    //    preventSound = true;
+    //}
 }

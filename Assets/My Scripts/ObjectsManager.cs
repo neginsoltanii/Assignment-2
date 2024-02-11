@@ -30,8 +30,7 @@ public class ObjectsManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        ObjectCollisionSound collisionSoundScript = other.GetComponent<ObjectCollisionSound>();
-
+        //ObjectCollisionSound collisionSoundScript = other.GetComponent<ObjectCollisionSound>();
         if (other.CompareTag("Safe"))
         {
             audioSource.PlayOneShot(safeObjectClip);
@@ -40,7 +39,7 @@ public class ObjectsManager : MonoBehaviour
         else if (other.CompareTag("Unsafe"))
         {
             audioSource.PlayOneShot(unsafeObjectClip);
-            unsafeObjectsInBinCount++; // Increment the counter
+            unsafeObjectsInBinCount++; 
 
             // Check if all three unsafe objects are in the bin
             if (unsafeObjectsInBinCount == numberOfUnsafeObjects)
@@ -69,8 +68,7 @@ public class ObjectsManager : MonoBehaviour
                 rb.angularVelocity = Vector3.zero;
             }
         }
-
-     //   audioSource.Stop();
+        //audioSource.Stop();
 
         // Wait for a second or so to let the glow and sound effect play out
         yield return new WaitForSeconds(0.5f); 
